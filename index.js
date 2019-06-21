@@ -1,5 +1,5 @@
 const express = require('express');
-const  db = require('./models');
+const db = require('./models');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -26,7 +26,6 @@ app.post('/students', function(req, res){
     db.student.create({
         firstName:req.body.firstName,
         lastName: req.body.lastName,
-        studentId: parseInt(req.body.studentId),
         age: parseInt(req.body.age),
         fieldOfStudy: req.body.fieldOfStudy,
         email: req.body.email
